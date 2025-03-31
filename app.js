@@ -79,11 +79,12 @@ function generateUserList(users,stocks) {
       portfolioDetails.appendChild(actionEl);
     })
     portfolioDetails.addEventListener('click', (event) => {
-        if (event.target.tagName === 'BUTTON') {
-          viewStock(event.target.id, stocks);
-        }
-      });
-    }
+      if (event.target.tagName === 'BUTTON') {
+        viewStock(event.target.id, stocks);
+      }
+    });
+  }
+    
   function populateForm(data) {
     const { user, id } = data;
     document.querySelector('#userID').value = id;
